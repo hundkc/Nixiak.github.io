@@ -2,24 +2,23 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Nixiak_blog</title>
+<title>        2.27学习记录 | Nixiak_blog</title>
 <link rel="shortcut icon" href="https://github.com/hundkc/Nixiak.github.io/favicon.ico?v=1614497774385">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://github.com/hundkc/Nixiak.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | Nixiak_blog - Atom Feed" href="https://github.com/hundkc/Nixiak.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="        2.27学习记录 | Nixiak_blog - Atom Feed" href="https://github.com/hundkc/Nixiak.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
-
-🏠 关于本站
-👨‍💻 博主是谁
-⛹ 兴趣爱好
-📬 联系我呀
+    <meta name="description" content="PE：
+DOS头部：(84)
+WORD  e_magic;(需被设置值0x5A4D,ASCII值为&quot;MZ&quot;)
+LONG   e_lfanew(指出PE头的文件偏移位置)
+标准PE头：(24)
+WORD Machine;
 ..." />
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="日常" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -81,37 +80,71 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+                      2.27学习记录
             </h2>
             <div class="post-info">
               <span>
-                2019-01-25
+                2021-02-27
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
+              
+                <a href="https://github.com/hundkc/Nixiak.github.io/tag/oat0Fvk9g/" class="post-tag">
+                  # 日常
+                </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+                <p>PE：<br>
+DOS头部：(84)<br>
+WORD  e_magic;(需被设置值0x5A4D,ASCII值为&quot;MZ&quot;)<br>
+LONG   e_lfanew(指出PE头的文件偏移位置)</p>
+<p>标准PE头：(24)<br>
+WORD Machine;<br>
+WORD NumberOfSections;   //区块的数量<br>
+DWORD TimeDateStamp;//该值不影响文件的运行，用来记录编译器创建此文件的时间<br>
+...............<br>
+WORD   SizeOfOptionalHeader;   //跟在此结构后面的数据大小，即IMAGE_OPTIONAL_HEADER的大小<br>
+WORD   Characteristics;  //该字段用于标识文件的属性，文件是否是可运行的形态、是否为DLL文件等信息</p>
+<p>可选PE头：<br>
+WORD      Magic; // ....为32结构体时，Magic码为10B；为64结构体时，Magic码为20B<br>
+...............<br>
+DWORD   SizeOfCode;<br>
+DWORD   SizeOfInitializedDate;<br>
+DWORD   SizeOfUninitializedDate;<br>
+DWORD   AddressOfEntryPoint； //程序执行入口RAV<br>
+DWORD   BaseOfCode;  // 代码区块的起始RVA<br>
+DWORD   BaseOfDate;  //数据区块的起始RVA<br>
+DWORD   ImageBase;  //文件在内存中的首选装入地址<br>
+DWORD   SectionAlignment;  // 被装入内存中时区块对齐大小，一般是(4KB)<br>
+DWORD   FileAlignment;  // PE文件内的区块对齐大小，一般是0x200或0x1000<br>
+..................<br>
+DWORD   SizeOfInage;   // 映像装入内存中的总大小<br>
+DWORD   SizeOfHeaders;  //MS-DOS头部+PE头部+区块表的总大小<br>
+DWORD   CheckSun; // 映像的校验和<br>
+..................<br>
+DWORD   SizeOfStackReserve;<br>
+DWORD   SizeOfStackCommit;<br>
+DWORD   SizeOfHeapReserve;<br>
+DWORD   SizeOfHeapCommit;</p>
+<h2 id="misc"><strong>MISC</strong></h2>
+<p>学到了一个画图工具：gnuplot<br>
+附上教程：https://max.book118.com/html/2017/1005/136012578.shtm<br>
+追踪数据流：https://blog.51cto.com/yttitan/1737904</p>
+<!-- more -->
+<!-- more -->
+<!-- more -->
+<!-- more -->
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
+<li><a href="#misc"><strong>MISC</strong></a></li>
 </ul>
 </li>
 </ul>
