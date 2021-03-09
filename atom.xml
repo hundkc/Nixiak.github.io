@@ -2,11 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/hundkc/Nixiak.github.io</id>
     <title>Nixiak_blog</title>
-    <updated>2021-02-28T07:38:24.087Z</updated>
+    <updated>2021-03-09T12:55:39.871Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://github.com/hundkc/Nixiak.github.io"/>
     <link rel="self" href="https://github.com/hundkc/Nixiak.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>You  are  on  the  balloon.
+</subtitle>
     <logo>https://github.com/hundkc/Nixiak.github.io/images/avatar.png</logo>
     <icon>https://github.com/hundkc/Nixiak.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Nixiak_blog</rights>
@@ -16,83 +17,5 @@
         <link href="https://github.com/hundkc/Nixiak.github.io/post/227-xue-xi-ji-lu/">
         </link>
         <updated>2021-02-27T12:32:26.000Z</updated>
-        <summary type="html"><![CDATA[<p>PE：<br>
-DOS头部：(84)<br>
-WORD  e_magic;(需被设置值0x5A4D,ASCII值为&quot;MZ&quot;)<br>
-LONG   e_lfanew(指出PE头的文件偏移位置)</p>
-<p>标准PE头：(24)<br>
-WORD Machine;<br>
-WORD NumberOfSections;   //区块的数量<br>
-DWORD TimeDateStamp;//该值不影响文件的运行，用来记录编译器创建此文件的时间<br>
-...............<br>
-WORD   SizeOfOptionalHeader;   //跟在此结构后面的数据大小，即IMAGE_OPTIONAL_HEADER的大小<br>
-WORD   Characteristics;  //该字段用于标识文件的属性，文件是否是可运行的形态、是否为DLL文件等信息</p>
-<p>可选PE头：<br>
-WORD      Magic; // ....为32结构体时，Magic码为10B；为64结构体时，Magic码为20B<br>
-...............<br>
-DWORD   SizeOfCode;<br>
-DWORD   SizeOfInitializedDate;<br>
-DWORD   SizeOfUninitializedDate;<br>
-DWORD   AddressOfEntryPoint； //程序执行入口RAV<br>
-DWORD   BaseOfCode;  // 代码区块的起始RVA<br>
-DWORD   BaseOfDate;  //数据区块的起始RVA<br>
-DWORD   ImageBase;  //文件在内存中的首选装入地址<br>
-DWORD   SectionAlignment;  // 被装入内存中时区块对齐大小，一般是(4KB)<br>
-DWORD   FileAlignment;  // PE文件内的区块对齐大小，一般是0x200或0x1000<br>
-..................<br>
-DWORD   SizeOfInage;   // 映像装入内存中的总大小<br>
-DWORD   SizeOfHeaders;  //MS-DOS头部+PE头部+区块表的总大小<br>
-DWORD   CheckSun; // 映像的校验和<br>
-..................<br>
-DWORD   SizeOfStackReserve;<br>
-DWORD   SizeOfStackCommit;<br>
-DWORD   SizeOfHeapReserve;<br>
-DWORD   SizeOfHeapCommit;</p>
-<h2 id="misc"><strong>MISC</strong></h2>
-<p>学到了一个画图工具：gnuplot<br>
-附上教程：https://max.book118.com/html/2017/1005/136012578.shtm<br>
-追踪数据流：https://blog.51cto.com/yttitan/1737904</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>PE：<br>
-DOS头部：(84)<br>
-WORD  e_magic;(需被设置值0x5A4D,ASCII值为&quot;MZ&quot;)<br>
-LONG   e_lfanew(指出PE头的文件偏移位置)</p>
-<p>标准PE头：(24)<br>
-WORD Machine;<br>
-WORD NumberOfSections;   //区块的数量<br>
-DWORD TimeDateStamp;//该值不影响文件的运行，用来记录编译器创建此文件的时间<br>
-...............<br>
-WORD   SizeOfOptionalHeader;   //跟在此结构后面的数据大小，即IMAGE_OPTIONAL_HEADER的大小<br>
-WORD   Characteristics;  //该字段用于标识文件的属性，文件是否是可运行的形态、是否为DLL文件等信息</p>
-<p>可选PE头：<br>
-WORD      Magic; // ....为32结构体时，Magic码为10B；为64结构体时，Magic码为20B<br>
-...............<br>
-DWORD   SizeOfCode;<br>
-DWORD   SizeOfInitializedDate;<br>
-DWORD   SizeOfUninitializedDate;<br>
-DWORD   AddressOfEntryPoint； //程序执行入口RAV<br>
-DWORD   BaseOfCode;  // 代码区块的起始RVA<br>
-DWORD   BaseOfDate;  //数据区块的起始RVA<br>
-DWORD   ImageBase;  //文件在内存中的首选装入地址<br>
-DWORD   SectionAlignment;  // 被装入内存中时区块对齐大小，一般是(4KB)<br>
-DWORD   FileAlignment;  // PE文件内的区块对齐大小，一般是0x200或0x1000<br>
-..................<br>
-DWORD   SizeOfInage;   // 映像装入内存中的总大小<br>
-DWORD   SizeOfHeaders;  //MS-DOS头部+PE头部+区块表的总大小<br>
-DWORD   CheckSun; // 映像的校验和<br>
-..................<br>
-DWORD   SizeOfStackReserve;<br>
-DWORD   SizeOfStackCommit;<br>
-DWORD   SizeOfHeapReserve;<br>
-DWORD   SizeOfHeapCommit;</p>
-<h2 id="misc"><strong>MISC</strong></h2>
-<p>学到了一个画图工具：gnuplot<br>
-附上教程：https://max.book118.com/html/2017/1005/136012578.shtm<br>
-追踪数据流：https://blog.51cto.com/yttitan/1737904</p>
-<!-- more -->
-<!-- more -->
-<!-- more -->
-<!-- more -->
-]]></content>
     </entry>
 </feed>
